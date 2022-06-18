@@ -9,43 +9,47 @@ struct conta
 	string CpfTitular;
 	string NomeTitular;
 	float Saldo;
+
+	void saque(float ValorASacar)
+	{
+		if (ValorASacar <= 0)
+		{
+			cout << "Voce nao pode sacar valores negativos!!" << endl;
+			cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << endl;
+			return;
+
+		}
+		else if (ValorASacar > Saldo)
+		{
+
+			cout << "Voce nao pode sacar valores maiores do que o seu saldo!!!" << endl;
+			cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << endl;
+			return;
+		}
+		else
+		{
+			Saldo -= ValorASacar;
+			cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << endl;
+
+		}
+	}
+
+
+	void depositar(float ValorADepositar)
+	{
+		if (ValorADepositar <= 0)
+		{
+			cout << "Voce nao pode depositar valores negativos!!" << endl;
+		}
+		else
+		{
+			Saldo += ValorADepositar;
+			cout << "O Saldo da conta de " << NomeTitular << " e de R$" << Saldo << endl;
+		}
+	}
 };
 
-void saque(conta& Conta, float ValorASacar)
-{
-	if (ValorASacar <= 0)
-	{
-		cout << "Voce nao pode sacar valores negativos!!" << endl;
-		cout << "Seu saldo é de R$" << Conta.Saldo << endl;
-		return;
-		
-	}
-	else if (ValorASacar > Conta.Saldo)
-	{
-		
-		cout << "Voce nao pode sacar valores maiores do que o seu saldo!!!" << endl;
-		cout << "Seu saldo é de R$" << Conta.Saldo << endl;
-		return;
-	}
-	else
-	{
-		Conta.Saldo -= ValorASacar;
-		cout << "Seu saldo  agora e de R$" << Conta.Saldo << endl;
 
- 	}
-}
-void depositar(conta& Conta, float ValorADepositar) 
-{
-    if (ValorADepositar<=0) 
-	{
-		cout << "Voce nao pode depositar valores negativos!!" << endl;
-	}
-	else
-	{
-		Conta.Saldo += ValorADepositar;
-		cout << "O Saldo da conta de " << Conta.NomeTitular << " e de R$" << Conta.Saldo << endl; 
-	}
-}
 
 int main()
 {
@@ -64,8 +68,8 @@ int main()
 	Contadois.Saldo = 100;
 
 	cout << "A conta de " << Contadois.NomeTitular << " tem R$" << Contadois.Saldo << endl;
-	 saque(Contaum,5);
-	 depositar(Contaum, 200);
+	Contaum.saque(5);
+	Contaum.depositar( 200);
 
 	return 0;
 }
