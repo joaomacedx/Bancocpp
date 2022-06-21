@@ -1,13 +1,16 @@
 #pragma once
 #include <string>
 
-struct conta
+
+class conta
 {
-	string NumeroConta;
-	string CpfTitular;
-	string NomeTitular;
+ private:
+	std::string NumeroConta;
+	std::string CpfTitular;
+	std::string NomeTitular;
 	float Saldo;
 
+ public:
 	void saque(float ValorASacar);
 	void depositar(float ValorADepositar);
 };
