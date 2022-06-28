@@ -8,20 +8,18 @@ class conta
 	std::string NumeroConta;
 	std::string CpfTitular;
 	std::string NomeTitular;
-	float Saldo = 0;
+	float Saldo;
 
  public:
 	void saque(float ValorASacar);
 	void depositar(float ValorADepositar);
 	float getSaldo();
+	conta(std::string Numero, std::string Nome, std::string Cpf);
 
-	void setNomeTitular(std::string nome);
 	std::string getNomeTitular();
 
-	void setCpfTitular(std::string Cpf);
 	std::string getCpfTitular();
 
-	void setNumeroConta(std::string Numero);
 	std::string getNumeroConta();
 	  
 };

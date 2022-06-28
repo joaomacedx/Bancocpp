@@ -1,6 +1,16 @@
 #include "Conta.hpp"
 #include <iostream>
 
+
+
+conta::conta(std::string Numero, std::string Nome, std::string Cpf)
+{
+	this -> NumeroConta = Numero;
+	this -> NomeTitular = Nome;
+	this -> CpfTitular = Cpf;
+	this -> Saldo = 0;
+
+}
 void conta::saque(float ValorASacar)
 {
 	if (ValorASacar <= 0)

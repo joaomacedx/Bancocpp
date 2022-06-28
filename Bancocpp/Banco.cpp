@@ -6,11 +6,9 @@ using namespace std;
 
 int main()
 {
-	conta Contaum;
-	conta Contadois;
-	
-	Contaum.setNomeTitular("fernando");
-	Contaum.setCpfTitular("077.654.333-00");
+	conta Contaum("12345-0", "Fernando", "767.876.999-00");
+	conta Contadois("12365-1", "Mauricio", "777.886.865-01");
+
 	Contaum.saque(5);
 	Contaum.depositar( 200);
 	
