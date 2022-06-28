@@ -6,7 +6,7 @@ void conta::saque(float ValorASacar)
 	if (ValorASacar <= 0)
 	{
 		std::cout << "Voce nao pode sacar valores negativos!!" << std::endl;
-		std::cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << std::endl;
+		std::cout << "O saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
 		return;
 
 	}
@@ -14,13 +14,12 @@ void conta::saque(float ValorASacar)
 	{
 
 		std::cout << "Voce nao pode sacar valores maiores do que o seu saldo!!!" << std::endl;
-		std::cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << std::endl;
 		return;
 	}
 	else
 	{
 		Saldo -= ValorASacar;
-		std::cout << "O saldo da conta de " << NomeTitular << " e de R$" << Saldo << std::endl;
+		std::cout << "O saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
 
 	}
 }
@@ -33,7 +32,38 @@ void conta::depositar(float ValorADepositar)
 	else
 	{
 		Saldo += ValorADepositar;
-		std::cout << "O Saldo da conta de " << NomeTitular << " e de R$" << Saldo << std::endl;
+		std::cout << "O Saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
 	}
 
+}
+float conta::getSaldo()
+{
+	return Saldo;
+}
+
+
+void conta::setNomeTitular(std::string nome)
+{
+	NomeTitular = nome;
+}
+std::string conta::getNomeTitular()
+{
+	return NomeTitular;
+}
+
+void conta::setCpfTitular(std::string Cpf)
+{
+	CpfTitular = Cpf;
+}
+std::string conta::getCpfTitular()
+{
+	return CpfTitular;
+}
+void conta::setNumeroConta(std::string Numero)
+{
+	NumeroConta = Numero;
+}
+std::string conta::getNumeroConta()
+{
+	return NumeroConta;
 }
