@@ -6,13 +6,11 @@ int conta::getnumeroDeContas()
 {
 	return numeroDeContas;
 }
-conta::conta(std::string Numero, std::string Nome, std::string Cpf)
+conta::conta(std::string Numero, Titular titular)
 	 :NumeroConta(Numero),
-	 NomeTitular (Nome),
-	 CpfTitular(Cpf),
+	 titular (titular),
 	 Saldo(0)
 {
-	CheckTamanhoDoNome();
 	numeroDeContas++;
 }
 conta::~conta()
@@ -24,7 +22,7 @@ void conta::saque(float ValorASacar)
 	if (ValorASacar <= 0)
 	{
 		std::cout << "Voce nao pode sacar valores negativos!!" << std::endl;
-		std::cout << "O saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
+		std::cout << "O saldo da conta de  e de R$" << getSaldo() << std::endl;
 		return;
 
 	}
@@ -37,7 +35,7 @@ void conta::saque(float ValorASacar)
 	else
 	{
 		Saldo -= ValorASacar;
-		std::cout << "O saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
+		std::cout << "O saldo da conta de e de R$" << getSaldo() << std::endl;
 
 	}
 }
@@ -50,7 +48,7 @@ void conta::depositar(float ValorADepositar)
 	else
 	{
 		Saldo += ValorADepositar;
-		std::cout << "O Saldo da conta de " << getNomeTitular() << " e de R$" << getSaldo() << std::endl;
+		std::cout << "O Saldo da conta de  e de R$" << getSaldo() << std::endl;
 	}
 
 }
@@ -58,24 +56,10 @@ float conta::getSaldo() const
 {
 	return Saldo;
 }
-std::string conta::getNomeTitular()
-{
-	return NomeTitular;
-}
-std::string conta::getCpfTitular()
-{
-	return CpfTitular;
-}
+
+
 std::string conta::getNumeroConta()
 {
 	return NumeroConta;
 }
 
-void conta::CheckTamanhoDoNome()
-{
-	if (NomeTitular.size() < 5)
-	{
-		std::cout << "Nome muito curto" << std::endl;
-		exit(1);
-	}
-}
