@@ -14,6 +14,7 @@ int main()
 	
 	std::cout << "O CPF de " << Contaum.getNomeTitular() << " e: " << Contaum.getCpfTitular() << std::endl;
 	std::cout << "A conta tem o saldo de R$" << Contaum.getSaldo() << std::endl;
+	std::cout << "O numero de contas e criadas e:" << conta::getnumeroDeContas() << std::endl;
 
 	return 0;
 }
