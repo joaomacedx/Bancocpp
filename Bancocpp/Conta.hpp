@@ -19,6 +19,7 @@ public:
 	void depositar(float ValorADepositar);
 	float getSaldo() const;
 	conta(std::string Numero, std::string Nome, std::string Cpf);
+	~conta();
 
 	std::string getNomeTitular();
 

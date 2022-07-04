@@ -14,6 +14,10 @@ conta::conta(std::string Numero, std::string Nome, std::string Cpf)
 {
 	numeroDeContas++;
 }
+conta::~conta()
+{
+	numeroDeContas--;
+}
 void conta::saque(float ValorASacar)
 {
 	if (ValorASacar <= 0)
