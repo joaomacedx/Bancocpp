@@ -27,4 +27,6 @@ public:
 
 	std::string getNumeroConta();
 
+private:
+	void CheckTamanhoDoNome();
 };

@@ -8,6 +8,7 @@ int main()
 {
 	conta Contaum("12345-0", "Fernando", "767.876.999-00");
 	conta Contadois("12365-1", "Mauricio", "777.886.865-01");
+	conta Contatres("12365-1", "Ana", "788.000.897-02");
 
 	Contaum.saque(5);
 	Contaum.depositar( 200);
