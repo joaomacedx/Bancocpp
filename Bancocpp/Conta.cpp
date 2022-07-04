@@ -4,11 +4,11 @@
 
 
 conta::conta(std::string Numero, std::string Nome, std::string Cpf)
+	:NumeroConta(Numero),
+	NomeTitular(Nome),
+	CpfTitular(Cpf),
+	Saldo(0)
 {
-	this -> NumeroConta = Numero;
-	this -> NomeTitular = Nome;
-	this -> CpfTitular = Cpf;
-	this -> Saldo = 0;
 
 }
 void conta::saque(float ValorASacar)
@@ -50,28 +50,13 @@ float conta::getSaldo()
 {
 	return Saldo;
 }
-
-
-void conta::setNomeTitular(std::string nome)
-{
-	NomeTitular = nome;
-}
 std::string conta::getNomeTitular()
 {
 	return NomeTitular;
 }
-
-void conta::setCpfTitular(std::string Cpf)
-{
-	CpfTitular = Cpf;
-}
 std::string conta::getCpfTitular()
 {
 	return CpfTitular;
-}
-void conta::setNumeroConta(std::string Numero)
-{
-	NumeroConta = Numero;
 }
 std::string conta::getNumeroConta()
 {
