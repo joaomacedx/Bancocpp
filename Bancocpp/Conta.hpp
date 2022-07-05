@@ -21,4 +21,4 @@ public:
 	void depositar(float ValorADepositar);
 	float getSaldo() const;
 	std::string getNumeroConta();
-};
+}; 

@@ -1,15 +1,16 @@
 #pragma once
 #include <string>
+#include "Cpf.hpp"
 class Titular
 {
 private:
-	std::string Cpf;
+	Cpf cpf;
 	std::string Nome;
 
 public:
-	Titular(std::string Cpf, std::string Nome);
+	Titular(Cpf cpf, std::string Nome);
 	std::string getNome();
-	std::string getCpf();
+	
 
 
 private :
