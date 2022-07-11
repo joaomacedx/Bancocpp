@@ -6,7 +6,9 @@ class Funcionario :public Pessoa
 {
 public:
 	Funcionario(Cpf cpf, std::string Nome, float Salario);
+	std::string getNome();
 private:
 	float Salario;
+	
 };
 

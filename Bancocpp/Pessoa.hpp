@@ -3,7 +3,7 @@
 #include <string>
 class Pessoa
 {
-private:
+protected:
 	Cpf cpf;
 	std::string Nome;
 public:

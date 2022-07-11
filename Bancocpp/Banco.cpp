@@ -3,6 +3,7 @@
 #include "Conta.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
+#include "Funcionario.hpp"
 
 using namespace std;
 
@@ -20,6 +21,9 @@ int main()
 	
 	std::cout << "A conta tem o saldo de R$" << Contaum.getSaldo() << std::endl;
 	std::cout << "O numero de contas e criadas e:" << conta::getnumeroDeContas() << std::endl;
+
+	Funcionario funcionario(Cpf("123.456.789-10"), "Joao Macedo", 30000);
+	std::cout << "O Gerente do banco se chama: " << funcionario.getNome() << std::endl;
 
 	return 0;
 }

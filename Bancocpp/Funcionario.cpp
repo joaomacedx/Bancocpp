@@ -6,3 +6,7 @@ Funcionario::Funcionario(Cpf cpf, std::string Nome, float Salario) : Pessoa(cpf,
 {
 
 }
+std::string Funcionario::getNome()
+{
+	return Nome;
+}
