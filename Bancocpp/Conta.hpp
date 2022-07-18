@@ -12,12 +12,14 @@ public:
 private:
 	std::string NumeroConta;
 	Titular titular;
+
+protected:
 	float Saldo;
 
 public:
 	conta(std::string Numero, Titular titular);
 	~conta();
-	void saque(float ValorASacar);
+	virtual void saque(float ValorASacar);
 	void depositar(float ValorADepositar);
 	float getSaldo() const;
 	std::string getNumeroConta();

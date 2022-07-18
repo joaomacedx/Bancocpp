@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Conta.hpp"
+#include "ContaPoupanca.hpp"
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
@@ -15,9 +16,14 @@ int main()
 	conta Contadois("12365-1",titularDois);
 	Titular titularTres(Cpf("788.000.897-02"), "Fernanda");
 	conta Contatres("12365-1",titularTres);
+	Titular titularQuatro(Cpf("88.666.55-3"), "Patricia");
+	ContaPoupanca Conta4("56789-0", titularQuatro);
+	Contaum.depositar( 200);
+
+	Conta4.depositar(200);
+	Conta4.saque(5);
 
 	Contaum.saque(5);
-	Contaum.depositar( 200);
 	
 	std::cout << "A conta tem o saldo de R$" << Contaum.getSaldo() << std::endl;
 	std::cout << "O numero de contas e criadas e:" << conta::getnumeroDeContas() << std::endl;

@@ -7,9 +7,9 @@ int conta::getnumeroDeContas()
 	return numeroDeContas;
 }
 conta::conta(std::string Numero, Titular titular)
-	 :NumeroConta(Numero),
-	 titular (titular),
-	 Saldo(0)
+	:NumeroConta(Numero),
+	titular(titular),
+	Saldo(0)
 {
 	numeroDeContas++;
 }
@@ -22,11 +22,13 @@ void conta::saque(float ValorASacar)
 	if (ValorASacar <= 0)
 	{
 		std::cout << "Voce nao pode sacar valores negativos!!" << std::endl;
-		std::cout << "O saldo da conta de  e de R$" << getSaldo() << std::endl;
+		std::cout << "O saldo e de R$" << getSaldo() << std::endl;
 		return;
 
 	}
-	else if (ValorASacar > Saldo)
+	float tarifaDeSaque = ValorASacar * 0.05;
+	float valorDoSaque = ValorASacar + tarifaDeSaque;
+	if (valorDoSaque > Saldo)
 	{
 
 		std::cout << "Voce nao pode sacar valores maiores do que o seu saldo!!!" << std::endl;
@@ -34,8 +36,8 @@ void conta::saque(float ValorASacar)
 	}
 	else
 	{
-		Saldo -= ValorASacar;
-		std::cout << "O saldo da conta de e de R$" << getSaldo() << std::endl;
+		Saldo -= valorDoSaque;
+		std::cout << "O saldo e de R$" << getSaldo() << std::endl;
 
 	}
 }
@@ -48,7 +50,7 @@ void conta::depositar(float ValorADepositar)
 	else
 	{
 		Saldo += ValorADepositar;
-		std::cout << "O Saldo da conta de  e de R$" << getSaldo() << std::endl;
+		std::cout << "O Saldo e de R$" << getSaldo() << std::endl;
 	}
 
 }
