@@ -5,7 +5,6 @@ class ContaPoupanca : public conta
 {
 public:
 	ContaPoupanca(std::string Numero, Titular titular);
-	void saque(float ValorASacar) override;
-	~ContaPoupanca();
+	float taxaDeSaque()  const override;
 };
 

@@ -17,6 +17,10 @@ conta::~conta()
 {
 	numeroDeContas--;
 }
+float conta::taxaDeSaque() const
+{
+	return 0.5;
+}
 void conta::saque(float ValorASacar)
 {
 	if (ValorASacar <= 0)
@@ -26,7 +30,7 @@ void conta::saque(float ValorASacar)
 		return;
 
 	}
-	float tarifaDeSaque = ValorASacar * 0.05;
+	float tarifaDeSaque = ValorASacar * taxaDeSaque();
 	float valorDoSaque = ValorASacar + tarifaDeSaque;
 	if (valorDoSaque > Saldo)
 	{
