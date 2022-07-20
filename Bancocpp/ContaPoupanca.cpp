@@ -5,6 +5,9 @@ ContaPoupanca::ContaPoupanca(std::string Numero, Titular titular) : conta(Numero
 {
 
 }
+ContaPoupanca::~ContaPoupanca()
+{
+}
 void ContaPoupanca::saque(float ValorASacar)
 {
 	if (ValorASacar <= 0)
