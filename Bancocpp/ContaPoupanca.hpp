@@ -1,7 +1,7 @@
 #pragma once
 #include "Conta.hpp"
 #include <string>
-class ContaPoupanca : public conta
+class ContaPoupanca final : public conta
 {
 public:
 	ContaPoupanca(std::string Numero, Titular titular);

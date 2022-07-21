@@ -5,17 +5,18 @@
 #include "Titular.hpp"
 #include "Cpf.hpp"
 #include "Funcionario.hpp"
+#include "ContaCorrente.hpp"
 
 using namespace std;
 
 int main()
 {
 	Titular titularUm(Cpf("767.876.999-00"), "Fernando");
-	conta Contaum("12345-0",titularUm);
+	ContaCorrente Contaum("12345-0",titularUm);
 	Titular titularDois(Cpf("777.886.865-01"), "Mauricio");
-	conta Contadois("12365-1",titularDois);
+	ContaCorrente Contadois("12365-1",titularDois);
 	Titular titularTres(Cpf("788.000.897-02"), "Fernanda");
-	conta Contatres("12365-1",titularTres);
+	ContaCorrente Contatres("12365-1",titularTres);
 	Titular titularQuatro(Cpf("88.666.55-3"), "Patricia");
 	ContaPoupanca Conta4("56789-0", titularQuatro);
 	Contaum.depositar( 200);

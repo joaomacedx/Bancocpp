@@ -17,11 +17,11 @@ protected:
 	float Saldo;
 
 public:
-	conta(std::string Numero, Titular titular); 
+	conta(std::string Numero, Titular titular);
 	virtual ~conta();
 	void saque(float ValorASacar);
 	void depositar(float ValorADepositar);
 	float getSaldo() const;
 	std::string getNumeroConta();
-	virtual float taxaDeSaque() const;
+	virtual float taxaDeSaque() const = 0;
 };

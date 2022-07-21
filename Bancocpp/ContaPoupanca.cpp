@@ -7,5 +7,6 @@ ContaPoupanca::ContaPoupanca(std::string Numero, Titular titular) : conta(Numero
 }
 float ContaPoupanca::taxaDeSaque() const
 {
+	std::cout << "Sacando da Conta Poupanca" << std::endl;
 	return 0.09;
 }

@@ -17,10 +17,6 @@ conta::~conta()
 {
 	numeroDeContas--;
 }
-float conta::taxaDeSaque() const
-{
-	return 0.5;
-}
 void conta::saque(float ValorASacar)
 {
 	if (ValorASacar <= 0)
