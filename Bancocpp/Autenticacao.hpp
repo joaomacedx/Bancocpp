@@ -7,5 +7,6 @@ private:
 public:
 	Autenticacao(std::string Senha);
 	bool Autentica(std::string Senha) const;
+
 };
 
