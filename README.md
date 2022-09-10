@@ -1,2 +1,2 @@
 # Bancocpp
-Utilizando o conceito de um Banco, para entender,  os paradigmas da programação orientada a objetos,  através da linguagem C++.
+Using the concept of a Bank, to understand the paradigms of object-oriented programming, through the C++ language.
