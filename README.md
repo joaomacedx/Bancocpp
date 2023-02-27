@@ -18,12 +18,3 @@
   </a>
 </p>
 
-
-<p align="center">
-  <a href="#About"> About the Project </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</p>
-
-## :SalvadorBank: About the Project
-
-In this project I used the concept of a bank to train my understanding of business rules and requirements!
-
