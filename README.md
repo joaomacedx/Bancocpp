@@ -1,5 +1,3 @@
-# Bancocpp
-
 # Salvador Bank 
 
 <img alt="SalvadorBank" src="./assets/Capa_Bank.jpeg" />
