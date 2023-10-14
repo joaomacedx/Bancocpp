@@ -3,7 +3,7 @@
 <img alt="SalvadorBank" src="./assets/Capa_Bank.jpeg" />
 
 <h3 align="center">
-  Using the concept of a Bank, to understand the paradigms of object-oriented programming, through the C++ language.
+  Using the concept of a Bank, to study the paradigms of object-oriented programming, through the C++ language.
 </h3>
 
 <p align="center">“Fill up the banks with dollars”
